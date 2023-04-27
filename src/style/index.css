@@ -34,7 +34,12 @@ ul {
   border-radius: 5px;
 }
 
-@media only screen and (max-width: 320px) and (orientation: portrait) {
+@media only screen and (max-width: 320px) {
+  .app {
+    border: 0px;
+  }
+}
+@media only screen and (max-height: 320px) {
   .app {
     border: 0px;
   }
@@ -102,7 +107,8 @@ ul {
 @media only screen and (max-width: 1023px) and (orientation: landscape) {
   .displayApp {
     width: 750px;
-    height: 175px;
+    height: 50vh;
+    min-height: 150px;
   }
 }
 @media only screen and (max-width: 1023px) and (orientation: portrait) {
@@ -113,14 +119,16 @@ ul {
 }
 @media only screen and (max-width: 800px) and (orientation: portrait) {
   .displayApp {
-    width: 250px;
+    width: 80vw;
+    min-width: 250px;
     height: 450px;
   }
 }
 @media only screen and (max-width: 800px) and (orientation: landscape) {
   .displayApp {
     width: 600px;
-    height: 150px;
+    height: 50vh;
+    min-height: 150px;
   }
 }
 @media only screen and (max-width: 650px) and (orientation: landscape) {
@@ -145,17 +153,21 @@ ul {
 @media only screen and (max-width: 1023px) and (orientation: landscape) {
   .messagesDisplay {
     width: 100%;
-    height: 175px;
+    height: 50vh;
+    min-height: 150px;
   }
 }
 @media only screen and (max-width: 800px) and (orientation: landscape) {
   .messagesDisplay {
-    height: 150px;
+    height: 50vh;
+    min-height: 150px;
   }
 }
 @media only screen and (max-width: 800px) and (orientation: portrait) {
   .messagesDisplay {
     height: 450px;
+    width: 80vw;
+    min-width: 250px;
   }
 }
 .message {
@@ -252,7 +264,8 @@ ul {
 }
 @media only screen and (max-width: 800px) and (orientation: portrait) {
   .newMessageFormInput {
-    width: 190px;
+    width: calc(80vw - 60px);
+    min-width: 190px;
   }
 }
 @media only screen and (max-width: 800px) and (orientation: landscape) {
