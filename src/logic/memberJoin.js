@@ -1,3 +1,4 @@
+import memberJoinedAudio from "../sounds/memberJoined.mp3";
 import { v4 as uuidv4 } from "uuid";
 
 function MemberJoin(
@@ -6,6 +7,10 @@ function MemberJoin(
   setMessagesArray,
   setAllMembersArray
 ) {
+  //Sound effect when new member join chat
+  const soundEffect = new Audio(memberJoinedAudio);
+  soundEffect.play();
+
   const newMember = {
     id: member.id,
     name: member.clientData.name,
